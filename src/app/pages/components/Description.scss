@@ -1,0 +1,109 @@
+
+
+
+.description{
+    .destitle{
+        font-family: Linoscript;
+         font-weight: 100;
+        text-align: center;
+        color: #373737;
+        padding: 0.1em;
+       
+        @media (max-width: 768px) {
+            font-size: 4em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 10em;
+            //color: red;
+        }
+    }
+
+    .desline{
+        margin: 0.5em auto 2em auto;
+        width: 40%;
+    }
+
+    .destext{
+        
+        color: #595959;
+        text-align: justify;
+        font-family:"alsschlangesans";
+        margin: 1em auto 1em auto;
+        width: 80%;
+
+         @media (max-width: 768px) {
+            font-size: 1em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3em;
+            //color: red;
+        }
+
+    }
+
+    .mainpic {
+        margin: 1em auto;
+        width: 300px;   // фиксированная ширина
+        height: 500px;  // фиксированная высота
+        border-top-left-radius: 50% 50%;
+        border-top-right-radius: 50% 50%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        overflow: hidden;
+        display: flex;              // чтобы картинка центрировалась
+        justify-content: center;
+        align-items: center;
+       
+
+        .mainpicInner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;        // картинка заполняет арку
+        }
+
+        @media (max-width: 768px) {
+            width: 300px;   // фиксированная ширина
+            height: 300px; 
+        }
+
+        @media (min-width: 1024px) {
+            width: 800px;   // фиксированная ширина
+            height: 800px; 
+        }
+
+        //animation: breathe 6s ease-in-out infinite;
+        //animation: sway 8s ease-in-out infinite;
+        //animation: float 10s ease-in-out infinite;
+        animation: breatheRotate 5s ease-in-out infinite;
+
+        
+    }
+
+    
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes breatheRotate {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(1deg); }
+}

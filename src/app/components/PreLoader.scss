@@ -1,0 +1,75 @@
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: white;
+}
+
+
+.lines,
+.lines-other {
+  opacity: 0;
+//   transform: translateY(20px);
+//   animation: slideIn 1s ease-out forwards;
+//   animation-delay: 2s; 
+}
+
+.heart{
+    opacity: 0%;
+    animation: fadeInHeart 1s ease-in-out forwards,pulseHeart 1.5s ease-in-out infinite;;
+    animation-delay: 1s; 
+    transform-origin: center;
+}
+
+
+.stroke-heart {
+  stroke-width: 18;
+  stroke: #FD3AB5;
+  fill: none;
+  stroke-dasharray: 1000;       // длина линии
+  stroke-dashoffset: 1000;      // линия полностью скрыта
+  animation: strokeDraw 1s ease-in-out forwards, strokeOpracity  1s 1s ease-in-out forwards;
+}
+
+@keyframes strokeDraw {
+  to {
+    stroke-dashoffset: 0; 
+         
+  }
+}
+
+@keyframes strokeOpracity {
+  to {
+    opacity: 0;      
+     
+  }
+}
+
+@keyframes fadeInHeart {
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes pulseHeart {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+

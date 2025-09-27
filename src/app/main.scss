@@ -1,0 +1,81 @@
+//начальный наклонный
+@font-face {
+  font-family: "Linoscript";
+  src: url("/fonts/Linoscript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+//интересный наклонный
+@font-face {
+  font-family: "IndentureEnglishPenman_personal_use_demo_0";
+  src: url("/fonts/IndentureEnglishPenman_personal_use_demo_0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+//пиксельный
+@font-face {
+  font-family: "SmallestPixel7";
+  src: url("/fonts/SmallestPixel7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+//прикольный
+@font-face {
+  font-family: "kwl-data-1088";
+  src: url("/fonts/kwl-data-1088.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+//стандартный
+@font-face {
+  font-family: "alsschlangesans";
+  src: url("/fonts/alsschlangesans.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+//      kwl-data-1088
+//      alsschlangesans
+//      Linoscript
+//      SmallestPixel7
+//      IndentureEnglishPenman_personal_use_demo_0
+
+
+
+*{
+    padding: 0;
+    margin:0;
+    
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px;   /* ширина скролла */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;   /* убираем фон */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red;     /* красный ползунок */
+  border-radius: 6px;
+  border: 3px solid transparent; /* убираем "фон" вокруг */
+  background-clip: content-box;  /* чтобы осталась только красная полоска */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darkred;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: red transparent; // ползунок красный, дорожка прозрачная
+}

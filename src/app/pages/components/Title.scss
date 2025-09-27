@@ -1,0 +1,69 @@
+
+.title {
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+    //display: grid;
+    .background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // видео заполняет контейнер
+        
+    }
+    .shadow{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 25%;
+    }
+
+
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // центрирование
+        text-align: center;
+        color: white; // чтобы текст был виден поверх видео
+    }
+
+    .name {
+        margin-bottom: 0.3em;
+        font-family: "Linoscript";
+        font-weight: 500;
+        font-size: 3rem;
+        @media (max-width: 768px) {
+            font-size: 7em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 10em;
+            //color: red;
+        }
+    }
+
+    .date {
+        margin-top: 1em;
+        font-family: "SmallestPixel7";
+        
+        font-size: 1.5rem;
+        
+
+         @media (max-width: 768px) {
+            font-size: 2em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3em;
+            //color: red;
+        }
+    }
+}
+
