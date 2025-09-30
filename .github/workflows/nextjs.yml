@@ -39,6 +39,8 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASEURL: /${{ github.event.repository.name }}
+          MAIL_USER: faklor_br_ar@mail.ru
+          MAIL_PASS: dr29vYVs3U6Z6qKZ463e
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
