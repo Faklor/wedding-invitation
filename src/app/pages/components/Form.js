@@ -1,21 +1,13 @@
 'use client'
 
 import './Form.scss'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 export default function Form() {
   const [name, setName] = useState('')
-  const [guests, setGuests] = useState([])
   const [error, setError] = useState('')
-
-  // загрузка гостей при монтировании
-  useEffect(() => {
-    axios
-      .get('/api/guests')
-      .then((res) => setGuests(res.data))
-      .catch(() => setError('Ошибка загрузки списка гостей'))
-  }, [])
+  const [success, setSuccess] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -26,12 +18,12 @@ export default function Form() {
     }
 
     try {
-      const res = await axios.post('/api/guests', { name })
-      setGuests((prev) => [...prev, res.data])
+      await axios.post('/api/send', { name })
+      setSuccess(true)
       setName('')
       setError('')
     } catch (err) {
-      setError(err.response?.data?.error || 'Ошибка при добавлении')
+      setError('Ошибка при отправке')
     }
   }
 
@@ -53,17 +45,7 @@ export default function Form() {
       </form>
 
       {error && <p className="errorText">{error}</p>}
-
-      {guests.length > 0 && (
-        <div className="guestList">
-          <h3>Список гостей:</h3>
-          <ul>
-            {guests.map((guest) => (
-              <li key={guest.id}>{guest.name}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {success && <p className="successText">Спасибо! Ваш ответ отправлен.</p>}
     </div>
   )
 }
