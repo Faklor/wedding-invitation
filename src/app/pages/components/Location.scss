@@ -1,0 +1,113 @@
+.location{
+     text-align: center;
+    .locationTitle{
+         font-family: Linoscript;
+         font-weight: 100;
+        text-align: center;
+        color: #373737;
+        padding: 0.1em;
+        
+       
+        @media (max-width: 768px) {
+            font-size: 4em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 10em;
+            //color: red;
+        }
+    }
+
+    .locationDescription{
+        color: #595959;
+        text-align: justify;
+        font-family:"alsschlangesans";
+        margin: 1em auto 1em auto;
+        width: 60%;
+
+         @media (max-width: 768px) {
+            font-size: 1em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3em;
+            //color: red;
+        }
+    }
+
+    .picLocation{
+        width: 100%;
+        height: 15em;
+
+        object-fit: cover;
+         @media (max-width: 768px) {
+             height: 15em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+             height: 45em;
+            //color: red;
+        }
+    }
+
+    .item_navLocation{
+        display: flex;
+        justify-content: space-between;
+        margin: 1em auto;
+        font-family:"alsschlangesans";
+        color: #595959;
+        width: 40%;
+        .item_nameLocation{
+
+        }
+
+        .item_timeLocation{
+            padding-right: 0.5em;
+            border-right: #373737 0.2em solid;
+        }
+
+         @media (max-width: 768px) {
+             width: 80%;
+              font-size: 1em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            width: 40%;
+             font-size: 1.5em;
+            //color: red;
+        }
+    }
+
+    .btnLocation{
+        text-align: center;
+        padding: 1em 4em;
+        margin: 1em;
+         font-family:"alsschlangesans";
+        color: #595959;
+         border: #373737 0.1em solid;
+         background: transparent;
+         cursor: pointer;
+        transition: 0.5s;
+         &:hover{
+             background: #595959;
+             color:#fff;
+             border:#fff 0.1em solid;
+         }
+
+        @media (max-width: 768px) {
+            //width: 80%;
+            font-size: 1em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            //width: 40%;
+            font-size: 1.5em;
+            //color: red;
+        }
+    }
+}

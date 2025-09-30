@@ -1,0 +1,157 @@
+.dressCode{
+    .dressCodeTitle{
+        font-family: Linoscript;
+        font-weight: 100;
+        text-align: center;
+        color: #373737;
+        padding: 0.1em;
+        
+       
+        @media (max-width: 768px) {
+            font-size: 4em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 10em;
+            //color: red;
+        }
+    }
+
+    .dressCodeDescription{
+        
+        color: #595959;
+        text-align: justify;
+        font-family:"alsschlangesans";
+        margin: 1em auto 1em auto;
+        width: 40%;
+
+         @media (max-width: 768px) {
+            font-size: 1em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3em;
+            //color: red;
+        }
+    }
+
+    .dressCodeColors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2em auto;
+
+        
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: relative;
+        margin-left: -20px; // чтобы круги заходили друг на друга
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+        &:first-child {
+            margin-left: 0; // первый круг без сдвига
+        }
+    }
+
+    .c1 { background: #000; }     // красный
+    .c2 { background: #700006; }     // оранжевый
+    .c3 { background: #9E0002; }  // зелёный
+    .c4 { background: #D30010; }  // синий
+
+
+
+    .weddingAt {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .picLocation {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        //border-radius: 10px;
+
+          @media (max-width: 768px) {
+             height: 15em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+             height: 45em;
+            //color: red;
+        }
+    }
+
+    .dressCodeOverlay {
+        position: absolute;
+        font-family:"alsschlangesans";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.35); // затемнение
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        //padding: 1em;
+
+        @media (max-width: 768px) {
+             height: 15em;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+             height: 45em;
+            //color: red;
+        }
+    }
+
+    .weddingAtTitle {
+        font-size: 2.3em;
+        margin-bottom: 1em;
+        font-family: "Linoscript";
+       
+    }
+
+    .countdown {
+        display: flex;
+        gap: 1em;
+    }
+
+    .timeBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 70px;
+
+        .num {
+        font-size: 2.5em;
+        font-weight: bold;
+        line-height: 1;
+        }
+
+        .label {
+        font-size: 0.9em;
+        margin-top: 0.2em;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .weddingAtTitle {
+        font-size: 3em;
+        }
+        .num {
+        font-size: 3.5em;
+        }
+    }
+    }
+}

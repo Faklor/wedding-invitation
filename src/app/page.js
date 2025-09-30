@@ -22,7 +22,7 @@ export default function Main() {
   }, []);
 
 
-  return loading? <PreLoader/> : <Home setLoading={setLoading}/>
-  //return <Home setLoading={setLoading}/>
+  //return loading? <PreLoader/> : <Home setLoading={setLoading}/>
+  return <Home setLoading={setLoading}/>
 }
 

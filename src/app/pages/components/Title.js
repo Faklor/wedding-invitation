@@ -6,7 +6,7 @@ import './Title.scss'
 
 
 
-export default function Title({handleVideoLoaded}){
+export default function Title({handleVideoLoaded,weddingDate}){
 
     useEffect(() => {
         gsap.fromTo(
@@ -45,7 +45,9 @@ export default function Title({handleVideoLoaded}){
             </h1>
             <hr className='line'/>
             <h2 className='date'>
-                27 | 09 | 25
+                {String(weddingDate.getDate()).padStart(2, '0')} |  
+                {' ' + String(weddingDate.getMonth() + 1).padStart(2, '0')} |  
+                {' ' + String(weddingDate.getFullYear()).slice(-2)}
             </h2>
         </div>
     </div>

@@ -1,0 +1,19 @@
+ .createBy{
+        text-align: center;
+        font-family: "SmallestPixel7";
+       
+        margin: 1em;
+        font-size: 1.5rem;
+        
+
+         @media (max-width: 768px) {
+            font-size: 1em;
+          
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 1em;
+            //color: red;
+        }
+    }

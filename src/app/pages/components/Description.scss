@@ -2,12 +2,15 @@
 
 
 .description{
+    pointer-events: none;
     .destitle{
+        line-height: 0.8;
         font-family: Linoscript;
          font-weight: 100;
         text-align: center;
         color: #373737;
         padding: 0.1em;
+        margin-top: 0.5em;
        
         @media (max-width: 768px) {
             font-size: 4em;
@@ -62,7 +65,8 @@
         .mainpicInner {
             width: 100%;
             height: 100%;
-            object-fit: cover;        // картинка заполняет арку
+            object-fit: cover; 
+             animation: breatheRotate 5s ease-in-out infinite;       // картинка заполняет арку
         }
 
         @media (max-width: 768px) {
@@ -78,7 +82,7 @@
         //animation: breathe 6s ease-in-out infinite;
         //animation: sway 8s ease-in-out infinite;
         //animation: float 10s ease-in-out infinite;
-        animation: breatheRotate 5s ease-in-out infinite;
+       
 
         
     }
