@@ -56,7 +56,7 @@ export default function DressCode({ weddingDate }) {
 
   return (
     <div className="dressCode">
-      <h2 className="dressCodeTitle">Дресс-Код</h2>
+      {/* <h2 className="dressCodeTitle">Дресс-Код</h2>
 
       <p className="dressCodeDescription">
         Нам будет очень приятно видеть джентельменов в классических костюмах, а дам — в вечерних платьях следующих оттенков:
@@ -67,7 +67,7 @@ export default function DressCode({ weddingDate }) {
         <div className="circle c2"></div>
         <div className="circle c3"></div>
         <div className="circle c4"></div>
-      </div>
+      </div> */}
 
       <div className="weddingAt">
         <Image

@@ -39,13 +39,9 @@ export default function Footer({ weddingDate }) {
       <div className="overlay">
         <h2 className="footerTitle">Будем рады вас видеть!</h2>
         {/* <hr className="footerLine" /> */}
-        <h2 className="footerTitle2">с любовью Рома и Паша</h2>
+        <h2 className="footerTitle2">с любовью Байрта и Юрий</h2>
         {/* <hr className="footerLine" /> */}
-        <h2 className="footerDate">
-          {String(weddingDate.getDate()).padStart(2, '0')} |{' '}
-          {String(weddingDate.getMonth() + 1).padStart(2, '0')} |{' '}
-          {String(weddingDate.getFullYear()).slice(-2)}
-        </h2>
+       
       </div>
     </footer>
   )

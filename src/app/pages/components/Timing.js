@@ -10,16 +10,16 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Timing() {
   const items = [
-    {
-      icon: '/pic/item_nav_1.png',
-      time: '15:00',
-      text: 'Сбор гостей, WELCOME',
-    },
-    {
-      icon: '/pic/item_nav_2.png',
-      time: '16:00',
-      text: 'Выездная регистрация',
-    },
+    // {
+    //   icon: '/pic/item_nav_1.png',
+    //   time: '15:00',
+    //   text: 'Сбор гостей, WELCOME',
+    // },
+    // {
+    //   icon: '/pic/item_nav_2.png',
+    //   time: '16:00',
+    //   text: 'Выездная регистрация',
+    // },
     {
       icon: '/pic/item_nav_3.png',
       time: '17:00',

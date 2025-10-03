@@ -41,7 +41,7 @@ export default function Title({handleVideoLoaded,weddingDate}){
 
         <div className='overlay'>
             <h1 className='name'>
-                Рома и Паша
+                Байрта и Юрий
             </h1>
             <hr className='line'/>
             <h2 className='date'>

@@ -10,7 +10,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Location() {
-  const weddingAddress = 'Загородный клуб "Forest", 31 км, Приозерское шоссе'
+  const weddingAddress = 'г.Лагань ул.Льва Толстого 12, кафе «Байрта»'
+  const weddingAddress2 = 'г.Элиста, ул.Пюрбеева 30, ресторан «Крокус»'
+
+
 
   const mapsUrl = `https://yandex.ru/maps/?text=${encodeURIComponent(
     weddingAddress
@@ -34,7 +37,7 @@ export default function Location() {
       .from('.locationDescription', { opacity: 0, y: 20 }, '-=0.3')
       .from('.picLocation', { opacity: 0, scale: 0.8 }, '-=0.2')
       .from('.item_navLocation', { opacity: 0, y: 20 }, '-=0.2')
-      .from('.btnLocation', { opacity: 0, scale: 0.8 }, '-=0.2')
+      //.from('.btnLocation', { opacity: 0, scale: 0.8 }, '-=0.2')
   }, [])
 
   return (
@@ -42,7 +45,7 @@ export default function Location() {
       <h2 className="locationTitle">Локация</h2>
 
       <p className="locationDescription">
-        Наша свадьба пройдет в {weddingAddress}
+        Наша свадьба пройдет по адрессу {weddingAddress}
       </p>
 
       <Image

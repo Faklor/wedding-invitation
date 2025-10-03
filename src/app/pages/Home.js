@@ -20,7 +20,8 @@ export default function Home({ setLoading }) {
         
     };
 
-    const weddingDate = new Date(2025, 9, 3, 15, 0, 0) // 27 сентября 2025, 15:00
+    const weddingDate = new Date(2025, 10, 22, 15, 0, 0) // 22.11.2025
+    const weddingDate2 = new Date(2025, 10, 21, 15, 0, 0) // 21.11.2025
 
     return (
         <div className='Home'>
@@ -28,8 +29,9 @@ export default function Home({ setLoading }) {
            <Description/>
            <DateComponent weddingDate={weddingDate}/>
            <Location/>
-           <DressCode weddingDate={weddingDate}/>
            <Timing/>
+           <DressCode weddingDate={weddingDate}/>
+           
            <Wishes/>
            <Form />
            <Footer weddingDate={weddingDate}/>

@@ -41,8 +41,8 @@ export default function DateComponent({weddingDate}) {
       .from('.calendar-dayname', { opacity: 0, y: 20, stagger: 0.05 }, '-=0.2')
       .from('.calendar-cell', { opacity: 0, scale: 0.5, stagger: 0.02 }, '-=0.1')
       .to('.calendar-cell.highlight', {
-        scale: 1.3,
-        backgroundColor: '#d33',
+        //scale: 1.3,
+        //backgroundColor: '#d33',
         duration: 0.8,
         yoyo: true,
         repeat: 1,
@@ -63,14 +63,29 @@ export default function DateComponent({weddingDate}) {
               {d}
             </div>
           ))}
-          {days.map((d, idx) => (
+          {days.map((d, idx) => {
+          const isWeddingDay = d !== null && d === day
+          return (
             <div
               key={idx}
-             className={`calendar-cell ${d !== null && d === day ? 'highlight' : ''}`}
+              className={`calendar-cell ${isWeddingDay ? 'highlight' : ''}`}
             >
-              {d || ''}
+              {isWeddingDay ? (
+                <div>
+                  <img
+                    src="/pic/ring.png"
+                    alt="wedding ring"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  />
+                  <span className="cell-text">{d}</span>
+                </div>
+                
+              ) : (
+                d || ''
+              )}
             </div>
-          ))}
+          )
+        })}
         </div>
       </div>
     </div>

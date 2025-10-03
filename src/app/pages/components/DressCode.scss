@@ -1,6 +1,6 @@
 .dressCode{
     .dressCodeTitle{
-        font-family: Linoscript;
+        font-family: Lastochka;
         font-weight: 100;
         text-align: center;
         color: #373737;
@@ -90,7 +90,8 @@
 
     .dressCodeOverlay {
         position: absolute;
-        font-family:"alsschlangesans";
+        font-family:"alsschlangesans"; 
+        
         top: 0;
         left: 0;
         width: 100%;
@@ -100,8 +101,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #fff;
+        //color: #fff;
         text-align: center;
+         color:#000; 
         //padding: 1em;
 
         @media (max-width: 768px) {
@@ -118,7 +120,8 @@
     .weddingAtTitle {
         font-size: 2.3em;
         margin-bottom: 1em;
-        font-family: "Linoscript";
+       font-family:"Lastochka"; 
+       color:#000; 
        
     }
 
@@ -132,26 +135,52 @@
         flex-direction: column;
         align-items: center;
         min-width: 70px;
+        
 
         .num {
-        font-size: 2.5em;
-        font-weight: bold;
-        line-height: 1;
+            font-size: 2.5em;
+            font-weight: bold;
+            line-height: 1;
+            padding: 0.3em 0.5em;
+        
+            border-radius: 0.5em;
+            background-color: #DCD6D7;
         }
 
         .label {
-        font-size: 0.9em;
-        margin-top: 0.2em;
+            font-size: 1.9em;
+            margin: 0.2em;
         }
     }
 
-    @media (min-width: 768px) {
-        .weddingAtTitle {
-        font-size: 3em;
+        @media (max-width: 768px) {
+            .weddingAtTitle {
+                font-weight: 100;
+                font-size: 2.7em;
+            }
+            .timeBox{
+                .num {
+                    font-size: 1.5em;
+                }
+                .label {
+                    font-size: 1em;
+                    margin: 0.2em;
+                }
+            }
+           
         }
-        .num {
-        font-size: 3.5em;
+      @media (min-width: 1024px) {
+            .weddingAtTitle {
+                font-weight: 100;
+                font-size: 12em;
+            }
+            .num {
+                font-size: 1.5em;
+            }
+            .label {
+                font-size: 1.1em;
+                margin: 0.2em;
+            }
         }
-    }
     }
 }
