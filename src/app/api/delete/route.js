@@ -1,29 +1,26 @@
-import { writeFile, readFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises'
 import path from 'path'
-
-console.log(path.join(process.cwd(), 'src', 'data'))
 
 export async function POST(req) {
   try {
     const { name, user } = await req.json()
 
-    if (!name || !name.trim() || !['ura', 'bayrta'].includes(user)) {
+    if (!name || !user || !['ura', 'bayrta'].includes(user)) {
       return new Response('Invalid input', { status: 400 })
     }
 
     const fileName = user === 'ura' ? 'guestsUra.json' : 'guestsBayrta.json'
     const filePath = path.join(process.cwd(), 'src', 'data', fileName)
-    
 
     const fileData = await readFile(filePath, 'utf-8')
     const guests = JSON.parse(fileData)
 
-    guests.push({ name: name.trim(), timestamp: Date.now() })
+    const updated = guests.filter(g => g.name !== name)
 
-    await writeFile(filePath, JSON.stringify(guests, null, 2), 'utf-8')
-    return new Response('OK', { status: 200 })
+    await writeFile(filePath, JSON.stringify(updated, null, 2), 'utf-8')
+    return new Response('Deleted', { status: 200 })
   } catch (err) {
-    console.error('Ошибка записи:', err)
+    console.error('Ошибка удаления:', err)
     return new Response('Server error', { status: 500 })
   }
 }

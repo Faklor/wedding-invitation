@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 //dynamic
 import Form from './components/Form';
 
-export default function Home({ setLoading, weddingDate, weddingAddress,img }) {
+export default function Home({ setLoading, weddingDate, weddingAddress,img,user }) {
     const handleVideoLoaded = () => {
         setLoading(false); 
         
@@ -32,7 +32,7 @@ export default function Home({ setLoading, weddingDate, weddingAddress,img }) {
            <DressCode weddingDate={weddingDate}/>
            
            <Wishes/>
-           <Form />
+           <Form user={user}/>
            <Footer weddingDate={weddingDate}/>
            <div className='createBy'>
             Create by Falokfy

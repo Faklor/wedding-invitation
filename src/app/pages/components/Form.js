@@ -4,10 +4,11 @@ import './Form.scss'
 import { useState } from 'react'
 import axios from 'axios'
 
-export default function Form() {
+export default function Form({ user }) {
   const [name, setName] = useState('')
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
+  console.log(user)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -18,7 +19,7 @@ export default function Form() {
     }
 
     try {
-      await axios.post('/api/send', { name })
+      await axios.post('/api/send', { name, user })
       setSuccess(true)
       setName('')
       setError('')

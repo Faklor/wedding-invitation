@@ -13,6 +13,7 @@ export default function Ura(){
     const weddingDate = new Date(2025, 10, 22, 15, 0, 0) 
     const weddingAddress = 'г.Лагань ул.Льва Толстого 12, кафе «Байрта»'
     const img = 'none'
+    const user = 'ura'
 
     const [loading, setLoading] = useState(true);
      
@@ -28,6 +29,7 @@ export default function Ura(){
             weddingDate={weddingDate}
             weddingAddress={weddingAddress}
             img={img}
+            user={user}
         />
     // return <Home 
     //     setLoading={setLoading} 
