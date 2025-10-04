@@ -4,6 +4,7 @@ import './Date.scss'
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -71,12 +72,21 @@ export default function DateComponent({weddingDate}) {
               className={`calendar-cell ${isWeddingDay ? 'highlight' : ''}`}
             >
               {isWeddingDay ? (
-                <div>
-                  <img
+                <div> 
+                  <Image
+                      className="mainpicInner"
+                      src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/ring.png`}
+                      alt="wedding ring"
+                      width={400} 
+                      height={400} 
+                      style={{ objectFit: "contain", width: "100%", height: "100%" }} 
+                      priority      
+                  />
+                  {/* <img
                     src="/pic/ring.png"
                     alt="wedding ring"
                     style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                  />
+                  /> */}
                   <span className="cell-text">{d}</span>
                 </div>
                 
