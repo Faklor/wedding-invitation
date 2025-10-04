@@ -14,6 +14,8 @@ import Home from '../pages/Home'
 export default function Bayrta(){
     const weddingDate = new Date(2025, 10, 21, 15, 0, 0) 
     const weddingAddress = 'г.Элиста, ул.Пюрбеева 30, ресторан «Крокус»'
+    const img = 'location1.jpg' 
+
 
     const [loading, setLoading] = useState(true);
      
@@ -28,6 +30,7 @@ export default function Bayrta(){
         setLoading={setLoading} 
         weddingDate={weddingDate}
         weddingAddress={weddingAddress}
+        img={img}
     />
     // return <Home 
     //     setLoading={setLoading} 

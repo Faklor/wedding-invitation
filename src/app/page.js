@@ -20,6 +20,8 @@ export default function Main() {
   const weddingAddress = 'г.Лагань ул.Льва Толстого 12, кафе «Байрта»'
   const weddingAddress2 = 'г.Элиста, ул.Пюрбеева 30, ресторан «Крокус»'
 
+  const img = 'location1.jpg'
+
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000); 
@@ -32,6 +34,7 @@ export default function Main() {
           setLoading={setLoading} 
           weddingDate={weddingDate}
           weddingAddress={weddingAddress}
+          img = {img}
       />
   // return <Home 
   //   setLoading={setLoading} 
