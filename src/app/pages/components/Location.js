@@ -9,12 +9,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Location() {
-  const weddingAddress = 'г.Лагань ул.Льва Толстого 12, кафе «Байрта»'
-  const weddingAddress2 = 'г.Элиста, ул.Пюрбеева 30, ресторан «Крокус»'
-
-
-
+export default function Location({weddingAddress}) {
+  
   const mapsUrl = `https://yandex.ru/maps/?text=${encodeURIComponent(
     weddingAddress
   )}`

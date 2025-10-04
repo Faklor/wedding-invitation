@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import LocalFont from 'next/font/local'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const lastochka = LocalFont({
+  src: "./fonts/ofont.ru_Lastochka.ttf",
+  variable: "--font-lastochka",
+  display: "swap",
+});
+
+const alsschlangesans = LocalFont({
+  src: "./fonts/alsschlangesans.otf",
+  variable: "--font-lastochka",
+  display: "swap",
+});
+
+const SmallestPixel = LocalFont({
+  src: "./fonts/SmallestPixel7.ttf",
+  variable: "--font-lastochka",
+  display: "swap",
+});
+
+
+
 export const metadata = {
   title: "Wedding Invitation",
   description: "By falokfy",
@@ -22,7 +43,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${lastochka.variable} ${alsschlangesans.variable} ${SmallestPixel.variable}`}>
         {children}
       </body>
     </html>

@@ -13,8 +13,13 @@ import Home from './pages/Home'
 
 export default function Main() {
 
- const [loading, setLoading] = useState(true);
- 
+  const [loading, setLoading] = useState(true);
+  const weddingDate = new Date(2025, 10, 22, 15, 0, 0) // 22.11.2025
+  const weddingDate2 = new Date(2025, 10, 21, 15, 0, 0) // 21.11.2025
+
+  const weddingAddress = 'г.Лагань ул.Льва Толстого 12, кафе «Байрта»'
+  const weddingAddress2 = 'г.Элиста, ул.Пюрбеева 30, ресторан «Крокус»'
+
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000); 
@@ -22,7 +27,16 @@ export default function Main() {
   }, []);
 
 
-  //return loading? <PreLoader/> : <Home setLoading={setLoading}/>
-  return <Home setLoading={setLoading}/>
+  
+   return loading? <PreLoader/> : <Home 
+          setLoading={setLoading} 
+          weddingDate={weddingDate}
+          weddingAddress={weddingAddress}
+      />
+  // return <Home 
+  //   setLoading={setLoading} 
+  //   weddingDate={weddingDate} 
+  //   weddingAddress={weddingAddress}
+  // />
 }
 

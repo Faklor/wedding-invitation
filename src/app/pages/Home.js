@@ -14,21 +14,20 @@ import Footer from './components/Footer';
 //dynamic
 import Form from './components/Form';
 
-export default function Home({ setLoading }) {
+export default function Home({ setLoading, weddingDate, weddingAddress }) {
     const handleVideoLoaded = () => {
         setLoading(false); 
         
     };
 
-    const weddingDate = new Date(2025, 10, 22, 15, 0, 0) // 22.11.2025
-    const weddingDate2 = new Date(2025, 10, 21, 15, 0, 0) // 21.11.2025
+    
 
     return (
         <div className='Home'>
            <Title handleVideoLoaded={handleVideoLoaded} weddingDate={weddingDate}/>
            <Description/>
            <DateComponent weddingDate={weddingDate}/>
-           <Location/>
+           <Location weddingAddress={weddingAddress}/>
            <Timing/>
            <DressCode weddingDate={weddingDate}/>
            
