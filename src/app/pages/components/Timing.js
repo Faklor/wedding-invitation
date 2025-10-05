@@ -63,7 +63,8 @@ export default function Timing({timeStart}) {
           <div className="iconWrapper">
             <Image
               className="picLocation"
-              src={`${process.env.NEXT_PUBLIC_BASEURL}${item.icon}`}
+              //src={`${process.env.NEXT_PUBLIC_BASEURL}${item.icon}`}
+              src={`${item.icon}`}
               alt={item.text}
               width={40}
               height={40}

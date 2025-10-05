@@ -79,7 +79,8 @@ export default function DressCode({ weddingDate }) {
       <div className="weddingAt">
         <Image
           className="picLocation"
-          src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/dresscode.jpg`}
+          //src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/dresscode.jpg`}
+          src={`/pic/dresscode.jpg`}
           alt="Мы вдвоём"
           width={400}
           height={300}

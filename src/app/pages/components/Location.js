@@ -55,7 +55,8 @@ export default function Location({weddingAddress, img, timeStart}) {
       :
       <Image
         className="picLocation"
-        src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/${img}`}
+        //src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/${img}`}
+        src={`/pic/${img}`}
         alt="Мы вдвоём"
         width={400}
         height={300}

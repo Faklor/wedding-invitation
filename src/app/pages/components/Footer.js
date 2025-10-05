@@ -34,7 +34,8 @@ export default function Footer({ weddingDate }) {
   return (
     <footer className="footer">
       <video
-        src={`${process.env.NEXT_PUBLIC_BASEURL}/video/main.mp4`}
+        //src={`${process.env.NEXT_PUBLIC_BASEURL}/video/main.mp4`}
+        src={`/video/main.mp4`}
         autoPlay
         loop
         muted

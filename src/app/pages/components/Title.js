@@ -28,8 +28,8 @@ export default function Title({handleVideoLoaded,weddingDate}){
 
     return <div className="title">
         <video
-            //src="/video/main.mp4"
-            src={`${process.env.NEXT_PUBLIC_BASEURL}/video/main.mp4`}
+            src="/video/main.mp4"
+            //src={`${process.env.NEXT_PUBLIC_BASEURL}/video/main.mp4`}
             autoPlay
             loop
             muted

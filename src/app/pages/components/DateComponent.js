@@ -75,7 +75,8 @@ export default function DateComponent({weddingDate}) {
                 <div> 
                   <Image
                       className="mainpicInner"
-                      src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/ring.png`}
+                      //src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/ring.png`}
+                      src={`/pic/ring.png`}
                       alt="wedding ring"
                       width={400} 
                       height={400} 
