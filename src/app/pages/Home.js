@@ -27,8 +27,8 @@ export default function Home({ setLoading, weddingDate, weddingAddress,img,user,
            <Title handleVideoLoaded={handleVideoLoaded} weddingDate={weddingDate}/>
            <Description/>
            <DateComponent weddingDate={weddingDate}/>
-           <Location weddingAddress={weddingAddress} img={img}/>
-           <Timing timeStart={timeStart}/>
+           <Location weddingAddress={weddingAddress} img={img} timeStart={timeStart}/>
+           {/* <Timing timeStart={timeStart}/> */}
            <DressCode weddingDate={weddingDate}/>
            
            <Wishes/>

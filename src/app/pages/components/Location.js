@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Location({weddingAddress, img}) {
+export default function Location({weddingAddress, img, timeStart}) {
   
   const mapsUrl = `https://yandex.ru/maps/?text=${encodeURIComponent(
     weddingAddress
@@ -65,8 +65,8 @@ export default function Location({weddingAddress, img}) {
       
 
       <h3 className="item_navLocation">
-        <p className="item_nameLocation">СБОР ГОСТЕЙ, WELCOME</p>
-        <p className="item_timeLocation">15.00</p>
+        <p className="item_nameLocation">Начало банкета</p>
+        <p className="item_timeLocation">{timeStart}</p>
       </h3>
 
       <button className="btnLocation" onClick={handleOpenMap}>
