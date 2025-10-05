@@ -16,6 +16,8 @@ export default function Bayrta(){
     const weddingAddress = 'г.Элиста, ул.Пюрбеева 30, ресторан «Крокус»'
     const img = 'location1.jpg' 
     const user = 'bayrta'
+    const timeStart = '17:30'
+
 
     const [loading, setLoading] = useState(true);
      
@@ -32,6 +34,7 @@ export default function Bayrta(){
         weddingAddress={weddingAddress}
         img={img}
         user={user}
+        timeStart={timeStart}
     />
     // return <Home 
     //     setLoading={setLoading} 

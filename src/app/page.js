@@ -22,6 +22,8 @@ export default function Main() {
 
   const img = 'location1.jpg'
 
+  const timeStart = '17:00'
+
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000); 
@@ -35,6 +37,7 @@ export default function Main() {
           weddingDate={weddingDate}
           weddingAddress={weddingAddress}
           img = {img}
+          timeStart={timeStart}
       />
   // return <Home 
   //   setLoading={setLoading} 

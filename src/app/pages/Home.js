@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 //dynamic
 import Form from './components/Form';
 
-export default function Home({ setLoading, weddingDate, weddingAddress,img,user }) {
+export default function Home({ setLoading, weddingDate, weddingAddress,img,user,timeStart }) {
     const handleVideoLoaded = () => {
         setLoading(false); 
         
@@ -28,7 +28,7 @@ export default function Home({ setLoading, weddingDate, weddingAddress,img,user 
            <Description/>
            <DateComponent weddingDate={weddingDate}/>
            <Location weddingAddress={weddingAddress} img={img}/>
-           <Timing/>
+           <Timing timeStart={timeStart}/>
            <DressCode weddingDate={weddingDate}/>
            
            <Wishes/>

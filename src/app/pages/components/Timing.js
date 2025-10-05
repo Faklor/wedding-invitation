@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Timing() {
+export default function Timing({timeStart}) {
   const items = [
     // {
     //   icon: '/pic/item_nav_1.png',
@@ -22,7 +22,7 @@ export default function Timing() {
     // },
     {
       icon: '/pic/item_nav_3.png',
-      time: '17:00',
+      time: timeStart,
       text: 'Банкет',
     },
     {
