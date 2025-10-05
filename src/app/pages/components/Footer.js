@@ -22,6 +22,13 @@ export default function Footer({ weddingDate }) {
       .from('.footerLine', { opacity: 0, scaleX: 0, transformOrigin: 'center' }, '-=0.3')
       .from('.footerTitle2', { opacity: 0, y: 30 }, '-=0.2')
       .from('.footerDate', { opacity: 0, scale: 0.8 }, '-=0.2')
+
+      ScrollTrigger.refresh()
+
+        // return () => {
+        // tl.kill()
+        // ScrollTrigger.kill()
+        // }
   }, [])
 
   return (

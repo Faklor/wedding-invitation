@@ -52,6 +52,13 @@ export default function DressCode({ weddingDate }) {
       .from('.weddingAt', { opacity: 0, scale: 0.9 }, '-=0.2')
       .from('.weddingAtTitle', { opacity: 0, y: -20 }, '-=0.2')
       .from('.countdown .timeBox', { opacity: 0, y: 20, stagger: 0.1 }, '-=0.1')
+
+      ScrollTrigger.refresh()
+
+        // return () => {
+        // tl.kill()
+        // ScrollTrigger.kill()
+        // }
   }, [])
 
   return (

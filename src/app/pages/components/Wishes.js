@@ -9,10 +9,11 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Wishes() {
   const wishes = [
-    "Пусть ваша любовь будет такой же яркой и тёплой, как огонь в домашнем очаге.",
-    "Желаем, чтобы каждый новый день вместе приносил радость и вдохновение.",
+    // "Пусть ваша любовь будет такой же яркой и тёплой, как огонь в домашнем очаге.",
+    // "Желаем, чтобы каждый новый день вместе приносил радость и вдохновение.",
     // "Пусть ваши сердца всегда бьются в унисон, а дом будет полон смеха и уюта.",
     // "Желаем долгих лет счастья, взаимопонимания и бесконечных улыбок."
+    "Мы с теплотой относимся к детям любого возраста. Но для свадьбы выбрали формат 18+."
   ]
 
   const [current, setCurrent] = useState(0)
@@ -38,6 +39,13 @@ export default function Wishes() {
 
     tl.from('.wishesTitle', { opacity: 0, y: -30 })
       .from('.wishesSlider', { opacity: 0, scale: 0.9 }, '-=0.2')
+
+      ScrollTrigger.refresh()
+
+        // return () => {
+        // tl.kill()
+        // ScrollTrigger.kill()
+        // }
   }, [])
 
   // 🔹 Анимация смены пожелания
@@ -62,16 +70,16 @@ export default function Wishes() {
       <h2 className="wishesTitle">Пожелания</h2>
 
       <div className="wishesSlider">
-        <button className="navBtn" onClick={prevWish}>‹</button>
+        {/* <button className="navBtn" onClick={prevWish}>‹</button> */}
 
         <div className="wishContent">
           <p>{wishes[current]}</p>
-          <span className="counter">
+          {/* <span className="counter">
             {current + 1} / {wishes.length}
-          </span>
+          </span> */}
         </div>
 
-        <button className="navBtn" onClick={nextWish}>›</button>
+        {/* <button className="navBtn" onClick={nextWish}>›</button> */}
       </div>
     </div>
   )

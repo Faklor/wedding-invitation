@@ -34,6 +34,13 @@ export default function Location({weddingAddress, img}) {
       .from('.picLocation', { opacity: 0, scale: 0.8 }, '-=0.2')
       .from('.item_navLocation', { opacity: 0, y: 20 }, '-=0.2')
       //.from('.btnLocation', { opacity: 0, scale: 0.8 }, '-=0.2')
+
+      ScrollTrigger.refresh()
+
+        // return () => {
+        // tl.kill()
+        // ScrollTrigger.kill()
+        // }
   }, [])
 
   return (

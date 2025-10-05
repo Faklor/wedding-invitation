@@ -46,6 +46,13 @@ export default function Timing() {
       .from('.timingRow', { opacity: 0, y: 40, stagger: 0.2 }, '-=0.2')
       .from('.timingRow .iconWrapper img', { scale: 0, stagger: 0.2 }, '-=0.4')
       .from('.timingRow .textWrapper', { opacity: 0, x: 30, stagger: 0.2 }, '-=0.3')
+
+      ScrollTrigger.refresh()
+
+        // return () => {
+        // tl.kill()
+        // ScrollTrigger.kill()
+        // }
   }, [])
 
   return (
