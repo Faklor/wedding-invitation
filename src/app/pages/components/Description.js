@@ -45,7 +45,7 @@ export default function Description() {
         <Image
           className="mainpicInner"
           //src={`${process.env.NEXT_PUBLIC_BASEURL}/pic/main.jpg`}
-          src={`/pic/main.jpg`}
+          src={`/pic/main1.jpg`}
           alt="Мы вдвоём"
           width={400}
           height={300}

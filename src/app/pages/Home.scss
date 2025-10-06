@@ -17,3 +17,50 @@
             //color: red;
         }
     }
+
+
+.before-open{
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    position: relative;
+    //pointer-events: none;
+     text-align: center;
+     display: grid;
+
+    .btn-open{
+       align-self: center;
+        margin: 1em auto;
+        
+
+        text-align: center;
+        color: #595959;
+         border: #373737 0.1em solid;
+         background: transparent;
+         cursor: pointer;
+
+          transition: 0.5s;
+         &:hover{
+             background: #595959;
+             color:#fff;
+             border:#fff 0.1em solid;
+         }
+
+        padding: 1em 3em;
+        font-family:"alsschlangesans";
+
+        
+         @media (max-width: 768px) {
+            font-size: 1em;
+            width: 80%;
+            //olor: yellow;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3em;
+            width: 40%;
+            //color: red;
+        }
+
+    }
+}

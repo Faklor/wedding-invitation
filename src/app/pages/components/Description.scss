@@ -50,13 +50,15 @@
     }
 
     .mainpic {
-        margin: 1em auto;
-        width: 300px;   // фиксированная ширина
-        height: 500px;  // фиксированная высота
-        border-top-left-radius: 50% 50%;
-        border-top-right-radius: 50% 50%;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        margin: 1em auto 1em auto;
+        //width: 300px;   // фиксированная ширина
+        //height: 500px;  // фиксированная высота
+        // border-top-left-radius: 50% 50%;
+        // border-top-right-radius: 50% 50%;
+        // border-bottom-left-radius: 0;
+        // border-bottom-right-radius: 0;
+        width: 100%;
+        height: 300px;
         overflow: hidden;
         display: flex;              // чтобы картинка центрировалась
         justify-content: center;
@@ -71,13 +73,13 @@
         }
 
         @media (max-width: 768px) {
-            width: 300px;   // фиксированная ширина
+            //width: 300px;   // фиксированная ширина
             height: 300px; 
         }
 
         @media (min-width: 1024px) {
-            width: 800px;   // фиксированная ширина
-            height: 800px; 
+            //width: 800px;   // фиксированная ширина
+            height: 1200px; 
         }
 
         //animation: breathe 6s ease-in-out infinite;
