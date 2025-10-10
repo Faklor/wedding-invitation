@@ -14,7 +14,7 @@ export default function Ura(){
     const weddingAddress = 'г.Лагань ул.Льва Толстого 12, кафе «Байрта»'
     const img = 'none'
     const user = 'ura'
-    const timeStart = '18:00'
+    const timeStart = '17:00'
 
     const [loading, setLoading] = useState(true);
      
